@@ -1,0 +1,139 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum UserRole {
+  ADMIN
+  EDITOR
+}
+
+enum LeadType {
+  CONTACT
+  CIRCUIT_REQUEST
+}
+
+enum LeadStatus {
+  NEW
+  IN_PROGRESS
+  CLOSED
+}
+
+model User {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  passwordHash String   @map("password_hash")
+  role         UserRole @default(EDITOR)
+  createdAt    DateTime @default(now()) @map("created_at")
+  updatedAt    DateTime @updatedAt @map("updated_at")
+
+  @@map("users")
+}
+
+model Destination {
+  id          String   @id @default(cuid())
+  slug        String   @unique
+  titleI18n   Json     @map("title_i18n")
+  summaryI18n Json     @map("summary_i18n")
+  bodyI18n    Json     @map("body_i18n")
+  heroImage   String   @map("hero_image")
+  mapLat      Float    @map("map_lat")
+  mapLng      Float    @map("map_lng")
+  publishedAt DateTime? @map("published_at")
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt   DateTime @updatedAt @map("updated_at")
+
+  @@index([publishedAt])
+  @@map("destinations")
+}
+
+model Circuit {
+  id           String    @id @default(cuid())
+  slug         String    @unique
+  titleI18n    Json      @map("title_i18n")
+  durationDays Int       @map("duration_days")
+  bodyI18n     Json      @map("body_i18n")
+  coverImage   String    @map("cover_image")
+  publishedAt  DateTime? @map("published_at")
+  createdAt    DateTime  @default(now()) @map("created_at")
+  updatedAt    DateTime  @updatedAt @map("updated_at")
+
+  @@index([publishedAt])
+  @@map("circuits")
+}
+
+model Event {
+  id           String    @id @default(cuid())
+  slug         String    @unique
+  titleI18n    Json      @map("title_i18n")
+  startsAt     DateTime  @map("starts_at")
+  endsAt       DateTime  @map("ends_at")
+  locationI18n Json      @map("location_i18n")
+  bodyI18n     Json      @map("body_i18n")
+  publishedAt  DateTime? @map("published_at")
+  createdAt    DateTime  @default(now()) @map("created_at")
+  updatedAt    DateTime  @updatedAt @map("updated_at")
+
+  @@index([publishedAt])
+  @@index([startsAt])
+  @@map("events")
+}
+
+model Article {
+  id          String    @id @default(cuid())
+  slug        String    @unique
+  titleI18n   Json      @map("title_i18n")
+  excerptI18n Json      @map("excerpt_i18n")
+  bodyI18n    Json      @map("body_i18n")
+  coverImage  String    @map("cover_image")
+  publishedAt DateTime? @map("published_at")
+  createdAt   DateTime  @default(now()) @map("created_at")
+  updatedAt   DateTime  @updatedAt @map("updated_at")
+
+  @@index([publishedAt])
+  @@map("articles")
+}
+
+model GalleryItem {
+  id          String    @id @default(cuid())
+  imageUrl    String    @map("image_url")
+  captionI18n Json      @map("caption_i18n")
+  category    String
+  publishedAt DateTime? @map("published_at")
+  createdAt   DateTime  @default(now()) @map("created_at")
+  updatedAt   DateTime  @updatedAt @map("updated_at")
+
+  @@index([publishedAt])
+  @@map("gallery_items")
+}
+
+model Lead {
+  id          String     @id @default(cuid())
+  type        LeadType
+  fullName    String     @map("full_name")
+  email       String
+  phone       String
+  message     String
+  payloadJson Json       @map("payload_json")
+  locale      String
+  status      LeadStatus @default(NEW)
+  createdAt   DateTime   @default(now()) @map("created_at")
+  updatedAt   DateTime   @updatedAt @map("updated_at")
+
+  @@index([type])
+  @@index([status])
+  @@index([createdAt])
+  @@map("leads")
+}
+
+model SiteSetting {
+  key       String   @id
+  valueJson Json     @map("value_json")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@map("site_settings")
+}
