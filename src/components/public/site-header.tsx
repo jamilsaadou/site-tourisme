@@ -201,7 +201,6 @@ export function SiteHeader({ locale }: SiteHeaderProps) {
             </nav>
             <div className="ml-auto hidden shrink-0 items-center gap-3 lg:flex">
               <LocaleSwitcher currentLocale={locale} />
-              <Link href="/admin" className="btn btn-primary btn-sm" onClick={closeOpenNavMenus}><svg viewBox="0 0 16 16" fill="none" className="h-3.5 w-3.5" aria-hidden><rect x="2" y="2" width="5" height="5" rx="1" stroke="currentColor" strokeWidth="1.5" /><rect x="9" y="2" width="5" height="5" rx="1" stroke="currentColor" strokeWidth="1.5" /><rect x="2" y="9" width="5" height="5" rx="1" stroke="currentColor" strokeWidth="1.5" /><rect x="9" y="9" width="5" height="5" rx="1" stroke="currentColor" strokeWidth="1.5" /></svg>{dictionary.nav.admin}</Link>
             </div>
             <div className="ml-auto flex items-center gap-2.5 lg:hidden">
               <LocaleSwitcher currentLocale={locale} />
@@ -219,9 +218,6 @@ export function SiteHeader({ locale }: SiteHeaderProps) {
                   <div className="mobile-menu-group mt-3 rounded-[var(--radius-lg)] border border-[var(--border-orange)] bg-[var(--niger-orange-soft)] p-3.5">
                     <div className="flex items-center gap-2 mb-3"><span className="h-1.5 w-1.5 rounded-full bg-[var(--niger-orange)]" /><p className="text-[0.68rem] font-bold tracking-[0.12em] text-[var(--niger-orange)] uppercase">{dictionary.nav.niger}</p></div>
                     <div className="grid gap-1">{nigerLinks.map((link) => (<Link key={link.href} href={link.href} className="mobile-submenu-link" onClick={closeOpenNavMenus}>{link.label}</Link>))}</div>
-                  </div>
-                  <div className="mt-4 pt-4 border-t border-[var(--border-light)]">
-                    <Link href="/admin" className="btn btn-primary w-full" onClick={closeOpenNavMenus}><svg viewBox="0 0 16 16" fill="none" className="h-4 w-4" aria-hidden><rect x="2" y="2" width="5" height="5" rx="1" stroke="currentColor" strokeWidth="1.5" /><rect x="9" y="2" width="5" height="5" rx="1" stroke="currentColor" strokeWidth="1.5" /><rect x="2" y="9" width="5" height="5" rx="1" stroke="currentColor" strokeWidth="1.5" /><rect x="9" y="9" width="5" height="5" rx="1" stroke="currentColor" strokeWidth="1.5" /></svg>{dictionary.nav.admin}</Link>
                   </div>
                 </div>
               </details>

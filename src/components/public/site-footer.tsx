@@ -287,10 +287,6 @@ export function SiteFooter({ locale }: SiteFooterProps) {
             <Link href="#" className="hover:text-white/80 transition-colors">
               Confidentialité
             </Link>
-            <span className="h-3 w-px bg-white/20" aria-hidden />
-            <Link href="/admin" className="hover:text-white/80 transition-colors">
-              Administration
-            </Link>
           </div>
         </div>
       </div>
