@@ -17,71 +17,80 @@ type HeroSlide = {
 const heroSlides: Record<Locale, HeroSlide[]> = {
   fr: [
     {
-      src: "/images/WhatsApp%20Image%202026-03-06%20at%2009.40.54.jpeg",
-      alt: "Madame la Ministre du Tourisme du Niger",
+      src: "/images/imsl.jpeg",
+      alt: "Madame la Ministre lors d'une allocution officielle",
       kicker: "Leadership",
-      title: "Madame la Ministre du Tourisme",
-      subtitle: "Conduire les priorités nationales pour un tourisme durable, authentique et compétitif au Niger.",
+      title: "Une vision portée par l'action publique",
+      subtitle:
+        "Le Ministère du Tourisme et de l'Artisanat impulse une dynamique de valorisation du Niger, de ses territoires et de ses savoir-faire.",
     },
     {
-      src: "/media/hero-tourisme.jpg",
-      alt: "Paysage touristique du Niger",
-      kicker: "Destinations",
-      title: "Là où le Sahara rencontre la vie",
-      subtitle: "Désert de l'Aïr, Fleuve Niger, W du Niger — des trésors naturels et culturels uniques au monde.",
+      src: "/images/discou%20minis.jpeg",
+      alt: "Madame la Ministre lors d'un événement institutionnel",
+      kicker: "Rayonnement",
+      title: "Le tourisme nigérien sur la scène institutionnelle",
+      subtitle:
+        "Rencontres, partenariats et diplomatie culturelle renforcent l'attractivité du Niger auprès des visiteurs et des investisseurs.",
     },
     {
-      src: "/media/alkaki-zinder.jpg",
-      alt: "Savoir-faire artisanal du Niger",
-      kicker: "Patrimoine",
-      title: "Culture et artisanat nigérien",
-      subtitle: "Cuir de Zinder, bronze touareg, tissu traditionnel — un savoir-faire millénaire à découvrir.",
+      src: "/images/burki%20minis.jpeg",
+      alt: "Cérémonie culturelle au Niger",
+      kicker: "Patrimoine vivant",
+      title: "Des traditions qui accueillent le monde",
+      subtitle:
+        "Festivals, cérémonies et expressions culturelles incarnent un Niger fier de son identité et ouvert au monde.",
     },
   ],
   en: [
     {
-      src: "/images/WhatsApp%20Image%202026-03-06%20at%2009.40.54.jpeg",
-      alt: "Minister of Tourism of Niger",
+      src: "/images/imsl.jpeg",
+      alt: "The Minister during an official address",
       kicker: "Leadership",
-      title: "Minister of Tourism",
-      subtitle: "Driving national priorities for sustainable, authentic, and competitive tourism in Niger.",
+      title: "A public vision in motion",
+      subtitle:
+        "The Ministry of Tourism and Crafts is driving Niger's visibility, territorial development, and cultural know-how.",
     },
     {
-      src: "/media/hero-tourisme.jpg",
-      alt: "Tourism landscape in Niger",
-      kicker: "Destinations",
-      title: "Where the Sahara meets life",
-      subtitle: "Aïr Desert, Niger River, W National Park — world-class natural and cultural treasures.",
+      src: "/images/discou%20minis.jpeg",
+      alt: "The Minister at an institutional event",
+      kicker: "Outreach",
+      title: "Niger tourism on the institutional stage",
+      subtitle:
+        "Meetings, partnerships, and cultural diplomacy strengthen Niger's appeal to visitors and investors.",
     },
     {
-      src: "/media/alkaki-zinder.jpg",
-      alt: "Niger craftsmanship",
-      kicker: "Heritage",
-      title: "Culture and craftsmanship",
-      subtitle: "Zinder leather, Tuareg bronze, traditional textiles — a millennium of know-how.",
+      src: "/images/burki%20minis.jpeg",
+      alt: "Cultural ceremony in Niger",
+      kicker: "Living heritage",
+      title: "Traditions that welcome the world",
+      subtitle:
+        "Festivals, ceremonies, and cultural expressions reflect a Niger proud of its identity and open to the world.",
     },
   ],
   ha: [
     {
-      src: "/images/WhatsApp%20Image%202026-03-06%20at%2009.40.54.jpeg",
-      alt: "Ministar yawon bude ido ta Nijar",
+      src: "/images/imsl.jpeg",
+      alt: "Ministar yawon bude ido tana gabatar da jawabi",
       kicker: "Jagoranci",
-      title: "Ministar yawon bude ido",
-      subtitle: "Jagorancin manyan manufofi domin dorewar bunkasar yawon bude ido a Nijar.",
+      title: "Hangen nesa mai aiki",
+      subtitle:
+        "Ma'aikatar Yawon Bude Ido da Sana'o'i na bunkasa martabar Nijar, yankunanta da sana'o'inta na gargajiya.",
     },
     {
-      src: "/media/hero-tourisme.jpg",
-      alt: "Kyawawan wuraren Nijar",
-      kicker: "Wurare",
-      title: "Inda hamada ta haɗu da rayuwa",
-      subtitle: "Hamada, Kogin Kwara, W National Park — kyawawan wuraren duniya.",
+      src: "/images/discou%20minis.jpeg",
+      alt: "Ministar a wani taron hukuma",
+      kicker: "Haske",
+      title: "Yawon bude ido na Nijar a dandalin hukuma",
+      subtitle:
+        "Taron hadin gwiwa da diplomasiyyar al'adu suna kara jan hankalin Nijar ga baki da masu zuba jari.",
     },
     {
-      src: "/media/alkaki-zinder.jpg",
-      alt: "Sana'ar gargajiya ta Nijar",
-      kicker: "Gado",
-      title: "Al'adu da sana'a",
-      subtitle: "Fata ta Zinder, tagulla ta Tuareg, zane na gargajiya — tsararren sana'a.",
+      src: "/images/burki%20minis.jpeg",
+      alt: "Bikin al'adu a Nijar",
+      kicker: "Gado mai rai",
+      title: "Al'adun da ke maraba da duniya",
+      subtitle:
+        "Bukukuwa da al'adun gargajiya suna nuna Nijar mai alfahari da asalinta kuma a bude take ga duniya.",
     },
   ],
 };
@@ -110,10 +119,13 @@ const cta: Record<Locale, { primary: string; secondary: string; primaryHref: str
 export function Hero({ locale }: HeroProps) {
   const slides = heroSlides[locale];
   const buttons = cta[locale];
-  const heroHeight = "min(82svh, 620px)";
+  const heroHeight = "min(85svh, 680px)";
 
   return (
     <section className="relative overflow-hidden" style={{ minHeight: heroHeight }}>
+      {/* Niger Flag Top Accent */}
+      <div className="absolute top-0 left-0 right-0 h-1 z-20 bg-[var(--niger-orange)]" />
+      
       {/* Slideshow */}
       <div className="hero-main-slider absolute inset-0">
         {slides.map((slide, index) => (
@@ -130,21 +142,31 @@ export function Hero({ locale }: HeroProps) {
               sizes="100vw"
               className="object-cover"
             />
-            {/* Cinematic gradient overlay */}
+            {/* Modern gradient overlay */}
             <div
               className="absolute inset-0"
               style={{
                 background:
-                  "linear-gradient(to top, rgba(13,35,24,0.88) 0%, rgba(13,35,24,0.45) 40%, rgba(13,35,24,0.2) 70%, rgba(13,35,24,0.35) 100%)",
+                  "linear-gradient(to top, rgba(0,107,43,0.85) 0%, rgba(0,107,43,0.4) 35%, rgba(26,26,46,0.2) 60%, rgba(26,26,46,0.4) 100%)",
               }}
             />
           </figure>
         ))}
       </div>
 
+      {/* Glass Effect Overlay Pattern */}
+      <div 
+        className="absolute inset-0 z-[5] pointer-events-none opacity-30"
+        style={{
+          backgroundImage: "url('/image%20s/textureT.png')",
+          backgroundSize: "400px 400px",
+          mixBlendMode: "overlay",
+        }}
+      />
+
       {/* Content */}
       <div className="relative z-10 flex h-full flex-col" style={{ minHeight: heroHeight }}>
-        <div className="flex flex-1 items-end pb-10 pt-16">
+        <div className="flex flex-1 items-end pb-12 pt-20">
           <div className="page-wrap w-full">
             <div className="max-w-3xl">
               <div className="hero-main-copy-stack">
@@ -155,23 +177,32 @@ export function Hero({ locale }: HeroProps) {
                     style={{ animationDelay: `${index * 8}s` }}
                     aria-hidden={index !== 0}
                   >
-                    <span className="kicker kicker--dark mb-5 inline-flex">
+                    {/* Kicker with Flag Colors */}
+                    <span className="kicker kicker--dark mb-6 inline-flex">
                       {slide.kicker}
                     </span>
+                    
                     <h1
-                      className="font-display text-white"
+                      className="text-white"
                       style={{
-                        fontSize: "clamp(2rem, 5.5vw, 4rem)",
-                        lineHeight: 1.1,
-                        fontWeight: 700,
-                        textShadow: "0 2px 20px rgba(0,0,0,0.3)",
+                        color: "#ffffff",
+                        fontSize: "clamp(2.2rem, 6vw, 4.5rem)",
+                        lineHeight: 1.08,
+                        fontWeight: 800,
+                        letterSpacing: "-0.02em",
+                        textShadow: "0 4px 24px rgba(0,0,0,0.25)",
                       }}
                     >
                       {slide.title}
                     </h1>
+                    
                     <p
-                      className="mt-4 max-w-2xl text-white/80"
-                      style={{ fontSize: "clamp(0.95rem, 2vw, 1.2rem)", lineHeight: 1.6 }}
+                      className="mt-5 max-w-2xl text-white/85"
+                      style={{ 
+                        fontSize: "clamp(1rem, 2.2vw, 1.25rem)", 
+                        lineHeight: 1.65,
+                        textShadow: "0 2px 8px rgba(0,0,0,0.15)",
+                      }}
                     >
                       {slide.subtitle}
                     </p>
@@ -179,18 +210,18 @@ export function Hero({ locale }: HeroProps) {
                 ))}
               </div>
 
-              {/* CTAs — always visible */}
-              <div className="relative z-20 mt-8 flex flex-wrap items-center gap-3">
-                <Link href={buttons.primaryHref} className="btn btn-gold btn-lg">
-                  <svg viewBox="0 0 20 20" fill="none" className="h-4 w-4 shrink-0" aria-hidden>
+              {/* CTAs with improved styling */}
+              <div className="relative z-20 mt-10 flex flex-wrap items-center gap-4">
+                <Link href={buttons.primaryHref} className="btn btn-secondary btn-lg group">
+                  <svg viewBox="0 0 20 20" fill="none" className="h-5 w-5 shrink-0 transition-transform group-hover:scale-110" aria-hidden>
                     <path d="M10 17s6-5 6-9a6 6 0 10-12 0c0 4 6 9 6 9z" stroke="currentColor" strokeWidth="1.6" />
                     <circle cx="10" cy="8" r="2" stroke="currentColor" strokeWidth="1.6" />
                   </svg>
                   {buttons.primary}
                 </Link>
-                <Link href={buttons.secondaryHref} className="btn btn-outline btn-lg">
-                  <svg viewBox="0 0 20 20" fill="none" className="h-4 w-4 shrink-0" aria-hidden>
-                    <path d="M10 3l6 10H4L10 3z" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" />
+                <Link href={buttons.secondaryHref} className="btn btn-outline btn-lg group">
+                  <svg viewBox="0 0 20 20" fill="none" className="h-5 w-5 shrink-0 transition-transform group-hover:translate-x-0.5" aria-hidden>
+                    <path d="M4 10h12M12 6l4 4-4 4" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                   {buttons.secondary}
                 </Link>
@@ -199,38 +230,63 @@ export function Hero({ locale }: HeroProps) {
           </div>
         </div>
 
-        {/* Bottom bar: slide indicators + scroll hint */}
-        <div className="relative z-20 flex items-center justify-between px-6 pb-6 md:px-10">
-          <div className="flex items-center gap-2">
-            {slides.map((slide, index) => (
-              <span
-                key={`dot-${index}`}
-                className="hero-main-dot"
-                style={{ animationDelay: `${index * 8}s` }}
-                aria-hidden
-              />
-            ))}
-          </div>
+        {/* Bottom bar with Glass Effect */}
+        <div className="relative z-20">
+          {/* Glass bar */}
+          <div 
+            className="mx-4 mb-4 md:mx-8 rounded-[var(--radius-xl)] border border-white/15 backdrop-blur-xl"
+            style={{
+              background: "linear-gradient(135deg, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0.05) 100%)",
+            }}
+          >
+            <div className="flex items-center justify-between px-5 py-4 md:px-8">
+              {/* Slide indicators */}
+              <div className="flex items-center gap-3">
+                {slides.map((slide, index) => (
+                  <span
+                    key={`dot-${index}`}
+                    className="hero-main-dot"
+                    style={{ animationDelay: `${index * 8}s` }}
+                    aria-hidden
+                  />
+                ))}
+              </div>
 
-          {/* Scroll indicator */}
-          <div className="hidden items-center gap-2 text-white/60 md:flex" aria-hidden>
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              className="h-4 w-4 animate-bounce"
-            >
-              <path
-                d="M12 5v14M5 13l7 7 7-7"
-                stroke="currentColor"
-                strokeWidth="1.8"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-            <span className="text-xs font-medium tracking-widest uppercase">Défiler</span>
+              {/* Niger Flag Colors Indicator */}
+              <div className="hidden md:flex items-center gap-3">
+                <div className="flex items-center gap-1.5">
+                  <span className="h-2 w-6 rounded-full bg-[var(--niger-orange)]" />
+                  <span className="h-2 w-6 rounded-full bg-white" />
+                  <span className="h-2 w-6 rounded-full bg-[var(--niger-green)]" />
+                </div>
+              </div>
+
+              {/* Scroll indicator */}
+              <div className="flex items-center gap-2 text-white/70" aria-hidden>
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  className="h-4 w-4 animate-bounce"
+                >
+                  <path
+                    d="M12 5v14M5 13l7 7 7-7"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+                <span className="text-xs font-semibold tracking-widest uppercase">
+                  {locale === "fr" ? "Défiler" : locale === "en" ? "Scroll" : "Zagaya"}
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+      
+      {/* Niger Flag Bottom Accent */}
+      <div className="absolute bottom-0 left-0 right-0 h-1 z-20 bg-[var(--niger-green)]" />
     </section>
   );
 }

@@ -133,60 +133,66 @@ export function SiteFooter({ locale }: SiteFooterProps) {
 
   return (
     <footer className="footer-dark">
+      {/* Niger Flag Top Accent */}
+      <div className="h-1 bg-gradient-to-r from-[var(--niger-orange)] via-white to-[var(--niger-green)]" />
+      
       {/* Main footer grid */}
-      <div className="relative z-10 page-wrap py-14 md:py-16">
-        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
+      <div className="relative z-10 page-wrap py-16 md:py-20">
+        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1fr]">
 
           {/* Col 1: Identity */}
           <div>
-            <div className="flex items-center gap-3 mb-5">
-              <span className="relative inline-flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-white/15 bg-white/10">
+            <div className="flex items-center gap-4 mb-6">
+              <span className="relative inline-flex h-14 w-14 shrink-0 items-center justify-center overflow-hidden rounded-[var(--radius-lg)] border border-white/15 bg-white/10 backdrop-blur-sm">
                 <Image
                   src="/image%20s/armoirie.png"
                   alt="Armoiries du Niger"
                   fill
-                  sizes="48px"
-                  className="object-contain p-1.5"
+                  sizes="56px"
+                  className="object-contain p-2"
                 />
               </span>
               <div>
-                <p
-                  className="text-white font-bold leading-tight"
-                  style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1rem" }}
-                >
+                <p className="text-white font-bold leading-tight text-[1.1rem]">
                   {dictionary.siteName}
                 </p>
-                <p className="text-white/50 text-xs mt-0.5">République du Niger</p>
+                <p className="text-[var(--niger-orange-light)] text-xs mt-1 font-semibold tracking-wider uppercase">
+                  République du Niger
+                </p>
               </div>
             </div>
 
-            <p className="text-sm text-white/60 leading-relaxed max-w-xs">
+            <p className="text-sm text-white/70 leading-relaxed max-w-sm">
               {fc.tagline}
             </p>
 
-            <div className="mt-6 space-y-2 text-sm">
-              <div className="flex items-start gap-2 text-white/55">
-                <svg viewBox="0 0 16 16" fill="none" className="h-4 w-4 mt-0.5 shrink-0" aria-hidden>
-                  <path d="M8 9s4-3 4-6a4 4 0 10-8 0c0 3 4 6 4 6z" stroke="currentColor" strokeWidth="1.3" />
-                  <circle cx="8" cy="3.5" r="1.2" fill="currentColor" />
-                </svg>
+            {/* Contact Info with Icons */}
+            <div className="mt-8 space-y-3">
+              <div className="flex items-center gap-3 text-white/60 text-sm">
+                <span className="flex h-8 w-8 items-center justify-center rounded-[var(--radius-sm)] bg-white/8 border border-white/10">
+                  <svg viewBox="0 0 16 16" fill="none" className="h-4 w-4" aria-hidden>
+                    <path d="M8 9s4-3 4-6a4 4 0 10-8 0c0 3 4 6 4 6z" stroke="currentColor" strokeWidth="1.3" />
+                    <circle cx="8" cy="3.5" r="1.2" fill="currentColor" />
+                  </svg>
+                </span>
                 <span>{fc.address}</span>
               </div>
-              <div className="flex items-center gap-2 text-white/55">
-                <svg viewBox="0 0 16 16" fill="none" className="h-4 w-4 shrink-0" aria-hidden>
-                  <path d="M2 3.5C2 9.4 6.6 14 12.5 14l.5-2.5-2.5-1-1 1.5C8 11.5 4.5 8 4 6.5L5.5 5.5 4.5 3 2 3.5z" stroke="currentColor" strokeWidth="1.3" strokeLinejoin="round" />
-                </svg>
+              <div className="flex items-center gap-3 text-white/60 text-sm">
+                <span className="flex h-8 w-8 items-center justify-center rounded-[var(--radius-sm)] bg-white/8 border border-white/10">
+                  <svg viewBox="0 0 16 16" fill="none" className="h-4 w-4" aria-hidden>
+                    <path d="M2 3.5C2 9.4 6.6 14 12.5 14l.5-2.5-2.5-1-1 1.5C8 11.5 4.5 8 4 6.5L5.5 5.5 4.5 3 2 3.5z" stroke="currentColor" strokeWidth="1.3" strokeLinejoin="round" />
+                  </svg>
+                </span>
                 <span>{fc.phone}</span>
               </div>
-              <div className="flex items-center gap-2 text-white/55">
-                <svg viewBox="0 0 16 16" fill="none" className="h-4 w-4 shrink-0" aria-hidden>
-                  <rect x="2" y="4" width="12" height="9" rx="1.5" stroke="currentColor" strokeWidth="1.3" />
-                  <path d="M2 6l6 4 6-4" stroke="currentColor" strokeWidth="1.3" />
-                </svg>
-                <a
-                  href="mailto:contact@tourisme.gouv.ne"
-                  className="hover:text-white transition-colors"
-                >
+              <div className="flex items-center gap-3 text-white/60 text-sm">
+                <span className="flex h-8 w-8 items-center justify-center rounded-[var(--radius-sm)] bg-white/8 border border-white/10">
+                  <svg viewBox="0 0 16 16" fill="none" className="h-4 w-4" aria-hidden>
+                    <rect x="2" y="4" width="12" height="9" rx="1.5" stroke="currentColor" strokeWidth="1.3" />
+                    <path d="M2 6l6 4 6-4" stroke="currentColor" strokeWidth="1.3" />
+                  </svg>
+                </span>
+                <a href="mailto:contact@tourisme.gouv.ne" className="hover:text-white transition-colors">
                   contact@tourisme.gouv.ne
                 </a>
               </div>
@@ -195,13 +201,14 @@ export function SiteFooter({ locale }: SiteFooterProps) {
 
           {/* Col 2: Navigation */}
           <div>
-            <p className="text-xs font-bold tracking-[0.18em] text-yellow-400/80 uppercase mb-4">
+            <p className="text-xs font-bold tracking-[0.16em] text-[var(--niger-orange-light)] uppercase mb-5 flex items-center gap-2">
+              <span className="h-1 w-4 rounded-full bg-[var(--niger-orange)]" />
               {fc.discover}
             </p>
-            <nav className="grid gap-2">
+            <nav className="grid gap-2.5">
               {navLinks.map((link) => (
-                <Link key={link.href} href={link.href} className="footer-link">
-                  <svg viewBox="0 0 14 14" fill="none" className="h-3 w-3 shrink-0 opacity-50" aria-hidden>
+                <Link key={link.href} href={link.href} className="footer-link group">
+                  <svg viewBox="0 0 14 14" fill="none" className="h-3 w-3 shrink-0 opacity-40 group-hover:opacity-100 transition-opacity" aria-hidden>
                     <path d="M3 7h8M7 3l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                   {link.label}
@@ -212,13 +219,14 @@ export function SiteFooter({ locale }: SiteFooterProps) {
 
           {/* Col 3: Practical */}
           <div>
-            <p className="text-xs font-bold tracking-[0.18em] text-yellow-400/80 uppercase mb-4">
+            <p className="text-xs font-bold tracking-[0.16em] text-[var(--niger-orange-light)] uppercase mb-5 flex items-center gap-2">
+              <span className="h-1 w-4 rounded-full bg-white/50" />
               {fc.practical}
             </p>
-            <nav className="grid gap-2">
+            <nav className="grid gap-2.5">
               {practicalLinks.map((link) => (
-                <Link key={link.label} href={link.href} className="footer-link">
-                  <svg viewBox="0 0 14 14" fill="none" className="h-3 w-3 shrink-0 opacity-50" aria-hidden>
+                <Link key={link.label} href={link.href} className="footer-link group">
+                  <svg viewBox="0 0 14 14" fill="none" className="h-3 w-3 shrink-0 opacity-40 group-hover:opacity-100 transition-opacity" aria-hidden>
                     <path d="M3 7h8M7 3l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                   {link.label}
@@ -229,13 +237,14 @@ export function SiteFooter({ locale }: SiteFooterProps) {
 
           {/* Col 4: Institutional */}
           <div>
-            <p className="text-xs font-bold tracking-[0.18em] text-yellow-400/80 uppercase mb-4">
+            <p className="text-xs font-bold tracking-[0.16em] text-[var(--niger-orange-light)] uppercase mb-5 flex items-center gap-2">
+              <span className="h-1 w-4 rounded-full bg-[var(--niger-green-light)]" />
               {fc.institutional}
             </p>
-            <nav className="grid gap-2">
+            <nav className="grid gap-2.5">
               {institutionalLinks.map((link) => (
-                <Link key={link.label} href={link.href} className="footer-link">
-                  <svg viewBox="0 0 14 14" fill="none" className="h-3 w-3 shrink-0 opacity-50" aria-hidden>
+                <Link key={link.label} href={link.href} className="footer-link group">
+                  <svg viewBox="0 0 14 14" fill="none" className="h-3 w-3 shrink-0 opacity-40 group-hover:opacity-100 transition-opacity" aria-hidden>
                     <path d="M3 7h8M7 3l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                   {link.label}
@@ -243,19 +252,19 @@ export function SiteFooter({ locale }: SiteFooterProps) {
               ))}
             </nav>
 
-            {/* Partners logos placeholder */}
-            <div className="mt-6">
-              <p className="text-xs font-bold tracking-[0.18em] text-yellow-400/80 uppercase mb-3">
+            {/* Partners */}
+            <div className="mt-8">
+              <p className="text-xs font-bold tracking-[0.14em] text-white/50 uppercase mb-4">
                 Partenaires
               </p>
-              <div className="flex items-center gap-3 flex-wrap">
-                <span className="rounded-lg border border-white/10 bg-white/8 px-3 py-1.5 text-xs text-white/50">
+              <div className="flex items-center gap-2 flex-wrap">
+                <span className="rounded-[var(--radius-sm)] border border-white/10 bg-white/6 px-3 py-1.5 text-[0.68rem] text-white/60 font-medium">
                   ONU Tourisme
                 </span>
-                <span className="rounded-lg border border-white/10 bg-white/8 px-3 py-1.5 text-xs text-white/50">
+                <span className="rounded-[var(--radius-sm)] border border-white/10 bg-white/6 px-3 py-1.5 text-[0.68rem] text-white/60 font-medium">
                   UEMOA
                 </span>
-                <span className="rounded-lg border border-white/10 bg-white/8 px-3 py-1.5 text-xs text-white/50">
+                <span className="rounded-[var(--radius-sm)] border border-white/10 bg-white/6 px-3 py-1.5 text-[0.68rem] text-white/60 font-medium">
                   UNESCO
                 </span>
               </div>
@@ -264,22 +273,22 @@ export function SiteFooter({ locale }: SiteFooterProps) {
         </div>
       </div>
 
-      {/* Divider + bottom bar */}
-      <div className="relative z-10 border-t border-white/8">
-        <div className="page-wrap py-5 flex flex-col items-center justify-between gap-3 sm:flex-row">
-          <p className="text-xs text-white/40 text-center sm:text-left">
+      {/* Bottom bar */}
+      <div className="relative z-10 border-t border-white/10">
+        <div className="page-wrap py-6 flex flex-col items-center justify-between gap-4 sm:flex-row">
+          <p className="text-xs text-white/45 text-center sm:text-left">
             &copy; {new Date().getFullYear()} — {fc.rights}
           </p>
-          <div className="flex items-center gap-4 text-xs text-white/35">
-            <Link href="#" className="hover:text-white/70 transition-colors">
+          <div className="flex items-center gap-5 text-xs text-white/40">
+            <Link href="#" className="hover:text-white/80 transition-colors">
               Mentions légales
             </Link>
-            <span aria-hidden>·</span>
-            <Link href="#" className="hover:text-white/70 transition-colors">
+            <span className="h-3 w-px bg-white/20" aria-hidden />
+            <Link href="#" className="hover:text-white/80 transition-colors">
               Confidentialité
             </Link>
-            <span aria-hidden>·</span>
-            <Link href="/admin" className="hover:text-white/70 transition-colors">
+            <span className="h-3 w-px bg-white/20" aria-hidden />
+            <Link href="/admin" className="hover:text-white/80 transition-colors">
               Administration
             </Link>
           </div>

@@ -184,8 +184,6 @@ const copy: Record<
     axes: Array<{ num: string; title: string; text: string }>;
     expTitle: string;
     newsTitle: string;
-    contactTitle: string;
-    contactText: string;
     destsTitle: string;
     eventsTitle: string;
   }
@@ -213,8 +211,6 @@ const copy: Record<
     ],
     expTitle: "Que découvrir au Niger ?",
     newsTitle: "Actualités",
-    contactTitle: "Une question ou un partenariat ?",
-    contactText: "Le Ministère du Tourisme est à votre disposition pour accompagner vos projets au Niger.",
     destsTitle: "Destinations officielles",
     eventsTitle: "Agenda des événements",
   },
@@ -241,8 +237,6 @@ const copy: Record<
     ],
     expTitle: "What to discover in Niger?",
     newsTitle: "Institutional news",
-    contactTitle: "A question or partnership?",
-    contactText: "The Ministry of Tourism is at your disposal to support your tourism projects in Niger.",
     destsTitle: "Official destinations",
     eventsTitle: "Events calendar",
   },
@@ -269,8 +263,6 @@ const copy: Record<
     ],
     expTitle: "Me za a gano a Nijar?",
     newsTitle: "Labarai na hukuma",
-    contactTitle: "Tambaya ko haɗin gwiwa?",
-    contactText: "Ma'aikatar tana shirye don taimakon ayyukanku na yawon bude ido a Nijar.",
     destsTitle: "Wuraren yawon bude ido",
     eventsTitle: "Jadawalin abubuwa",
   },
@@ -321,28 +313,28 @@ export default async function HomePage({
 
       {/* ②  Catégories d'expériences — navigation rapide */}
       <MotionReveal>
-        <div className="border-b border-[var(--surface-border)] bg-white">
-          <div className="page-wrap py-6">
-            <div className="flex items-center justify-between gap-4 mb-4">
+        <div className="border-b border-[var(--border-light)] bg-[var(--surface-glass-strong)] backdrop-blur-sm">
+          <div className="page-wrap py-8">
+            <div className="flex items-center justify-between gap-4 mb-6">
               <span className="kicker">{ui.expTitle}</span>
               <Link href={`/${locale}/destinations`} className="text-link text-xs">
                 {dictionary.nav.destinations}
                 <IconArrowRight className="h-3.5 w-3.5" />
               </Link>
             </div>
-            <div className="grid grid-cols-3 gap-2 sm:grid-cols-6">
+            <div className="grid grid-cols-3 gap-3 sm:grid-cols-6">
               {expKeys.map((key) => {
                 const Icon = expIcons[key];
                 return (
                   <Link
                     key={key}
                     href={`/${locale}/destinations`}
-                    className="exp-card group py-4"
+                    className="exp-card group py-5"
                   >
                     <div className="exp-icon">
                       <Icon className="h-6 w-6" />
                     </div>
-                    <p className="text-[0.72rem] font-semibold text-center text-[var(--forest-mid)] group-hover:text-[var(--gold)] transition-colors leading-tight">
+                    <p className="text-[0.72rem] font-semibold text-center text-[var(--ink-mid)] group-hover:text-[var(--niger-orange)] transition-colors leading-tight">
                       {labels[key]}
                     </p>
                   </Link>
@@ -643,52 +635,6 @@ export default async function HomePage({
           </div>
         </MotionReveal>
       )}
-
-      {/* ⑨  Bannière contact */}
-      <MotionReveal>
-        <div className="page-wrap py-14">
-          <div
-            className="relative overflow-hidden rounded-[24px] px-8 py-14 text-center md:px-16"
-            style={{
-              background: "linear-gradient(135deg, var(--forest-mid) 0%, var(--flag-green) 100%)",
-            }}
-          >
-            <div
-              className="pointer-events-none absolute inset-0"
-              style={{
-                background:
-                  "radial-gradient(circle at 15% 50%, rgba(200,134,10,0.18), transparent 50%), radial-gradient(circle at 85% 40%, rgba(255,255,255,0.05), transparent 45%)",
-              }}
-            />
-            <div className="relative z-10">
-              <span className="kicker kicker--dark">Contact</span>
-              <h2
-                className="mt-4 text-white"
-                style={{
-                  fontSize: "clamp(1.4rem, 3vw, 2.25rem)",
-                  fontFamily: "var(--font-playfair), Georgia, serif",
-                }}
-              >
-                {ui.contactTitle}
-              </h2>
-              <p className="mt-3 max-w-md mx-auto text-white/70 text-[0.95rem] leading-relaxed">
-                {ui.contactText}
-              </p>
-              <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-                <Link href={`/${locale}/contact`} className="btn btn-gold btn-lg">
-                  {dictionary.nav.contact}
-                </Link>
-                <a
-                  href="mailto:contact@tourisme.gouv.ne"
-                  className="btn btn-outline btn-lg"
-                >
-                  contact@tourisme.gouv.ne
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </MotionReveal>
     </>
   );
 }

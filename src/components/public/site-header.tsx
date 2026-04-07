@@ -18,52 +18,64 @@ function MenuIcon({ name }: { name: MenuIconName }) {
   if (name === "home") {
     return (
       <svg viewBox="0 0 24 24" fill="none" className="nav-icon" aria-hidden>
-        <path d="M3 10.5L12 3l9 7.5" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
-        <path d="M5.25 9.75V21h13.5V9.75" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M3 10.5L12 3l9 7.5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M5.25 9.75V21h13.5V9.75" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M9.5 21v-6.5a2.5 2.5 0 015 0V21" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
     );
   }
   if (name === "ministry") {
     return (
       <svg viewBox="0 0 24 24" fill="none" className="nav-icon" aria-hidden>
-        <path d="M4 20h16" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />
-        <path d="M6 20V9M10 20V9M14 20V9M18 20V9" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
-        <path d="M4 9h16" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />
-        <path d="M5.5 9L12 4l6.5 5" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M4 20h16" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+        <path d="M6 20V10M10 20V10M14 20V10M18 20V10" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />
+        <path d="M4 10h16" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+        <path d="M5 10L12 4l7 6" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+        <circle cx="12" cy="7" r="1" fill="currentColor" />
       </svg>
     );
   }
   if (name === "niger") {
     return (
       <svg viewBox="0 0 24 24" fill="none" className="nav-icon" aria-hidden>
-        <circle cx="12" cy="12" r="8.5" stroke="currentColor" strokeWidth="1.7" />
-        <path d="M12 3.5c-2.4 2.7-3.8 5.4-3.8 8.5 0 3.1 1.4 5.8 3.8 8.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-        <path d="M12 3.5c2.4 2.7 3.8 5.4 3.8 8.5 0 3.1-1.4 5.8-3.8 8.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-        <path d="M3.5 12h17" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+        <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.8" />
+        <path d="M12 3c-2.5 2.8-4 5.6-4 9s1.5 6.2 4 9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+        <path d="M12 3c2.5 2.8 4 5.6 4 9s-1.5 6.2-4 9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+        <path d="M3 12h18" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
       </svg>
     );
   }
   if (name === "event") {
     return (
       <svg viewBox="0 0 24 24" fill="none" className="nav-icon" aria-hidden>
-        <rect x="3.5" y="5.5" width="17" height="15" rx="2.5" stroke="currentColor" strokeWidth="1.7" />
-        <path d="M7.5 3.5v4M16.5 3.5v4M3.5 9.5h17" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />
+        <rect x="3" y="5" width="18" height="16" rx="3" stroke="currentColor" strokeWidth="1.8" />
+        <path d="M7 3v4M17 3v4M3 10h18" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+        <circle cx="12" cy="15" r="2" fill="currentColor" />
       </svg>
     );
   }
   if (name === "news") {
     return (
       <svg viewBox="0 0 24 24" fill="none" className="nav-icon" aria-hidden>
-        <rect x="4" y="4.5" width="16" height="15" rx="2.5" stroke="currentColor" strokeWidth="1.7" />
-        <path d="M8 9h8M8 12.5h8M8 16h5" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />
+        <rect x="3" y="4" width="18" height="16" rx="2" stroke="currentColor" strokeWidth="1.8" />
+        <path d="M7 9h10M7 13h6M7 17h8" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />
       </svg>
     );
   }
   return (
     <svg viewBox="0 0 24 24" fill="none" className="nav-icon" aria-hidden>
-      <path d="M4.5 10.5L12 4l7.5 6.5" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
-      <path d="M6.5 9.5V20h11V9.5" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
-      <path d="M9.5 14h5" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />
+      <path d="M3 8l9-5 9 5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M6 6.5V18a2 2 0 002 2h8a2 2 0 002-2V6.5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M9 14h6" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+function FlagCircle() {
+  return (
+    <svg viewBox="0 0 20 20" className="h-3.5 w-3.5 shrink-0" aria-hidden>
+      <circle cx="10" cy="10" r="9" fill="none" stroke="currentColor" strokeWidth="1.5" opacity="0.5" />
+      <circle cx="10" cy="10" r="3" fill="currentColor" opacity="0.8" />
     </svg>
   );
 }
@@ -82,12 +94,8 @@ export function SiteHeader({ locale }: SiteHeaderProps) {
 
   const handleSummaryToggle = (event: ReactMouseEvent<HTMLElement>) => {
     event.preventDefault();
-
     const details = event.currentTarget.parentElement;
-    if (!(details instanceof HTMLDetailsElement)) {
-      return;
-    }
-
+    if (!(details instanceof HTMLDetailsElement)) return;
     const shouldOpen = !details.open;
     if (details.classList.contains("nav-group")) {
       const scope = headerRef.current ?? document;
@@ -95,7 +103,6 @@ export function SiteHeader({ locale }: SiteHeaderProps) {
         detail.open = false;
       });
     }
-
     details.open = shouldOpen;
   };
 
@@ -105,20 +112,12 @@ export function SiteHeader({ locale }: SiteHeaderProps) {
 
   useEffect(() => {
     const handlePointerDown = (event: PointerEvent) => {
-      if (!headerRef.current) {
-        return;
-      }
-      if (!headerRef.current.contains(event.target as Node)) {
-        closeOpenNavMenus();
-      }
+      if (!headerRef.current) return;
+      if (!headerRef.current.contains(event.target as Node)) closeOpenNavMenus();
     };
-
     const handleEscape = (event: KeyboardEvent) => {
-      if (event.key === "Escape") {
-        closeOpenNavMenus();
-      }
+      if (event.key === "Escape") closeOpenNavMenus();
     };
-
     document.addEventListener("pointerdown", handlePointerDown);
     document.addEventListener("keydown", handleEscape);
     return () => {
@@ -152,189 +151,77 @@ export function SiteHeader({ locale }: SiteHeaderProps) {
 
   return (
     <header ref={headerRef} className="sticky top-0 z-40">
-      {/* Government Trust Bar */}
       <div className="trust-bar">
         <div className="page-wrap flex items-center justify-between gap-4">
           <div className="flex items-center gap-2.5">
-            <svg viewBox="0 0 16 16" fill="none" className="h-3 w-3 shrink-0" aria-hidden>
-              <circle cx="8" cy="8" r="7" stroke="currentColor" strokeWidth="1.5" />
-              <path d="M8 4v4l2.5 2.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-            </svg>
-            <span>
+            <FlagCircle />
+            <span className="tracking-wider">
               {locale === "fr"
-                ? "Site officiel du Ministere du Tourisme et de l'Artisanat du Niger"
+                ? "Site officiel du Ministère du Tourisme et de l'Artisanat"
                 : locale === "en"
-                  ? "Official website of the Government of Niger"
-                  : "Shafin gwamnatin Nijar na hukuma"}
+                  ? "Official website of the Ministry of Tourism and Crafts"
+                  : "Shafin hukuma na Ma'aikatar Yawon Bude Ido"}
             </span>
           </div>
-          <div className="hidden items-center gap-3 sm:flex">
-            <a
-              href="https://niger.gov.ne"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-white transition-colors text-[0.67rem] tracking-widest opacity-70 hover:opacity-100"
-            >
-              niger.gov.ne ↗
+          <div className="hidden items-center gap-4 sm:flex">
+            <a href="https://niger.gov.ne" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-[0.65rem] tracking-widest opacity-75 hover:opacity-100 transition-opacity">
+              <svg viewBox="0 0 16 16" fill="none" className="h-3 w-3" aria-hidden><path d="M6 3H3v10h10v-3" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" /><path d="M8 8l5-5M10 3h3v3" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" /></svg>
+              niger.gov.ne
             </a>
           </div>
         </div>
       </div>
-
-      {/* Main Navigation */}
-      <div className="border-b border-[#eae8e1]/80 bg-white/96 backdrop-blur-lg">
+      <div className="border-b border-[var(--border-light)] bg-[var(--surface-glass-strong)] backdrop-blur-xl">
         <div className="page-wrap">
-          <div className="flex items-center gap-3 py-3 md:gap-5">
-            {/* Logo */}
-            <Link
-              href={`/${locale}`}
-              className="flex min-w-0 shrink-0 items-center gap-3"
-            >
-              <span className="relative inline-flex h-12 w-12 items-center justify-center overflow-hidden rounded-xl border border-[#ede8de] bg-white shadow-sm">
-                <Image
-                  src="/image%20s/armoirie.png"
-                  alt="Armoiries du Niger"
-                  fill
-                  sizes="48px"
-                  className="object-contain p-1.5"
-                />
+          <div className="flex items-center gap-4 py-3 md:gap-6">
+            <Link href={`/${locale}`} className="flex min-w-0 shrink-0 items-center gap-3 group">
+              <span className="relative inline-flex h-12 w-12 items-center justify-center overflow-hidden rounded-[var(--radius-md)] border border-[var(--border-light)] bg-white shadow-sm transition-all group-hover:shadow-md group-hover:border-[var(--border-medium)]">
+                <Image src="/image%20s/armoirie.png" alt="Armoiries du Niger" fill sizes="48px" className="object-contain p-1.5" />
               </span>
               <div className="min-w-0 hidden sm:block">
-                <p className="font-display text-[0.95rem] font-bold leading-tight text-[#0d2318] md:text-[1.1rem]">
-                  {dictionary.siteName}
-                </p>
-                <p className="text-[0.68rem] tracking-[0.06em] text-[#5a9478] font-medium">
-                  République du Niger
-                </p>
+                <p className="font-bold leading-tight text-[var(--ink)] text-[0.95rem] md:text-[1.05rem] tracking-tight">{dictionary.siteName}</p>
+                <p className="text-[0.65rem] tracking-[0.1em] text-[var(--niger-green)] font-semibold uppercase">République du Niger</p>
               </div>
             </Link>
-
-            {/* Desktop Nav */}
             <nav className="hidden min-w-0 flex-1 lg:block">
-              <div className="flex items-center gap-0.5 whitespace-nowrap">
+              <div className="flex items-center gap-1 whitespace-nowrap">
                 {primaryLinks.slice(0, 1).map((link) => (
-                  <Link key={link.href} href={link.href} className="nav-pill" onClick={closeOpenNavMenus}>
-                    <MenuIcon name={link.icon} />
-                    <span>{link.label}</span>
-                  </Link>
+                  <Link key={link.href} href={link.href} className="nav-pill" onClick={closeOpenNavMenus}><MenuIcon name={link.icon} /><span>{link.label}</span></Link>
                 ))}
-
                 <details className="nav-group">
-                  <summary className="nav-pill nav-pill-summary" onClick={handleSummaryToggle}>
-                    <MenuIcon name="ministry" />
-                    <span>{dictionary.nav.ministry}</span>
-                    <svg viewBox="0 0 12 12" fill="none" className="nav-chevron" aria-hidden>
-                      <path d="M2.5 4.5L6 8l3.5-3.5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  </summary>
-                  <div className="nav-dropdown">
-                    <div className="grid gap-1">
-                      {ministryLinks.map((link) => (
-                        <Link key={link.href} href={link.href} className="nav-dropdown-link" onClick={closeOpenNavMenus}>
-                          {link.label}
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
+                  <summary className="nav-pill nav-pill-summary" onClick={handleSummaryToggle}><MenuIcon name="ministry" /><span>{dictionary.nav.ministry}</span><svg viewBox="0 0 12 12" fill="none" className="nav-chevron" aria-hidden><path d="M2.5 4.5L6 8l3.5-3.5" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" /></svg></summary>
+                  <div className="nav-dropdown"><div className="grid gap-0.5">{ministryLinks.map((link) => (<Link key={link.href} href={link.href} className="nav-dropdown-link" onClick={closeOpenNavMenus}><svg viewBox="0 0 16 16" fill="none" className="h-3.5 w-3.5 mr-2 opacity-50" aria-hidden><path d="M4 8h8M8 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg>{link.label}</Link>))}</div></div>
                 </details>
-
                 <details className="nav-group">
-                  <summary className="nav-pill nav-pill-summary" onClick={handleSummaryToggle}>
-                    <MenuIcon name="niger" />
-                    <span>{dictionary.nav.niger}</span>
-                    <svg viewBox="0 0 12 12" fill="none" className="nav-chevron" aria-hidden>
-                      <path d="M2.5 4.5L6 8l3.5-3.5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  </summary>
-                  <div className="nav-dropdown">
-                    <div className="grid gap-1">
-                      {nigerLinks.map((link) => (
-                        <Link key={link.href} href={link.href} className="nav-dropdown-link" onClick={closeOpenNavMenus}>
-                          {link.label}
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
+                  <summary className="nav-pill nav-pill-summary" onClick={handleSummaryToggle}><MenuIcon name="niger" /><span>{dictionary.nav.niger}</span><svg viewBox="0 0 12 12" fill="none" className="nav-chevron" aria-hidden><path d="M2.5 4.5L6 8l3.5-3.5" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" /></svg></summary>
+                  <div className="nav-dropdown"><div className="grid gap-0.5">{nigerLinks.map((link) => (<Link key={link.href} href={link.href} className="nav-dropdown-link" onClick={closeOpenNavMenus}><svg viewBox="0 0 16 16" fill="none" className="h-3.5 w-3.5 mr-2 opacity-50" aria-hidden><path d="M4 8h8M8 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg>{link.label}</Link>))}</div></div>
                 </details>
-
-                {primaryLinks.slice(1).map((link) => (
-                  <Link key={link.href} href={link.href} className="nav-pill" onClick={closeOpenNavMenus}>
-                    <MenuIcon name={link.icon} />
-                    <span>{link.label}</span>
-                  </Link>
-                ))}
+                {primaryLinks.slice(1).map((link) => (<Link key={link.href} href={link.href} className="nav-pill" onClick={closeOpenNavMenus}><MenuIcon name={link.icon} /><span>{link.label}</span></Link>))}
               </div>
             </nav>
-
-            {/* Desktop Actions */}
-            <div className="ml-auto hidden shrink-0 items-center gap-2.5 lg:flex">
+            <div className="ml-auto hidden shrink-0 items-center gap-3 lg:flex">
               <LocaleSwitcher currentLocale={locale} />
-              <Link
-                href="/admin"
-                className="btn btn-primary btn-sm"
-                onClick={closeOpenNavMenus}
-              >
-                {dictionary.nav.admin}
-              </Link>
+              <Link href="/admin" className="btn btn-primary btn-sm" onClick={closeOpenNavMenus}><svg viewBox="0 0 16 16" fill="none" className="h-3.5 w-3.5" aria-hidden><rect x="2" y="2" width="5" height="5" rx="1" stroke="currentColor" strokeWidth="1.5" /><rect x="9" y="2" width="5" height="5" rx="1" stroke="currentColor" strokeWidth="1.5" /><rect x="2" y="9" width="5" height="5" rx="1" stroke="currentColor" strokeWidth="1.5" /><rect x="9" y="9" width="5" height="5" rx="1" stroke="currentColor" strokeWidth="1.5" /></svg>{dictionary.nav.admin}</Link>
             </div>
-
-            {/* Mobile: locale + burger */}
-            <div className="ml-auto flex items-center gap-2 lg:hidden">
+            <div className="ml-auto flex items-center gap-2.5 lg:hidden">
               <LocaleSwitcher currentLocale={locale} />
               <details className="relative">
-                <summary
-                  className="flex h-11 w-11 cursor-pointer list-none items-center justify-center rounded-xl border border-[#dce6df] bg-white text-[#0d2318] shadow-sm transition hover:border-[#c0d6c8] [&::-webkit-details-marker]:hidden"
-                  onClick={handleSummaryToggle}
-                >
-                  <span className="flex flex-col gap-[5px]">
-                    <span className="block h-[1.5px] w-5 rounded-full bg-current" />
-                    <span className="block h-[1.5px] w-5 rounded-full bg-current" />
-                    <span className="block h-[1.5px] w-3.5 rounded-full bg-current" />
-                  </span>
+                <summary className="flex h-11 w-11 cursor-pointer list-none items-center justify-center rounded-[var(--radius-md)] border border-[var(--border-light)] bg-white text-[var(--ink)] shadow-sm transition-all hover:border-[var(--border-medium)] hover:shadow-md [&::-webkit-details-marker]:hidden" onClick={handleSummaryToggle}>
+                  <span className="flex flex-col gap-[5px]"><span className="block h-[2px] w-5 rounded-full bg-[var(--niger-green)]" /><span className="block h-[2px] w-5 rounded-full bg-current" /><span className="block h-[2px] w-3.5 rounded-full bg-[var(--niger-orange)]" /></span>
                 </summary>
-
-                <div className="mobile-menu-panel absolute right-0 top-[calc(100%+0.6rem)] z-50 w-[min(94vw,350px)] rounded-2xl border border-[#e0e8e3] bg-white/98 p-3 shadow-[0_24px_48px_rgba(13,35,24,0.18)] backdrop-blur-lg">
-                  <nav className="grid gap-1">
-                    {primaryLinks.map((link) => (
-                      <Link
-                        key={link.href}
-                        href={link.href}
-                        className="mobile-menu-link"
-                        onClick={closeOpenNavMenus}
-                      >
-                        <MenuIcon name={link.icon} />
-                        <span>{link.label}</span>
-                      </Link>
-                    ))}
-                  </nav>
-                  <div className="mobile-menu-group mt-3 rounded-xl border border-[#e6eee8] bg-[#f8fcfa] p-3">
-                    <p className="text-[0.68rem] font-semibold tracking-[0.11em] text-[#5a9478] uppercase">
-                      {dictionary.nav.ministry}
-                    </p>
-                    <div className="mt-2 grid gap-1">
-                      {ministryLinks.map((link) => (
-                        <Link key={link.href} href={link.href} className="mobile-submenu-link" onClick={closeOpenNavMenus}>
-                          {link.label}
-                        </Link>
-                      ))}
-                    </div>
+                <div className="mobile-menu-panel absolute right-0 top-[calc(100%+0.65rem)] z-50 w-[min(94vw,360px)] rounded-[var(--radius-xl)] border border-[var(--border-light)] bg-[var(--surface-glass-strong)] backdrop-blur-xl p-3.5 shadow-[var(--shadow-elevated)]">
+                  <div className="flag-accent-line mb-4" />
+                  <nav className="grid gap-1">{primaryLinks.map((link) => (<Link key={link.href} href={link.href} className="mobile-menu-link" onClick={closeOpenNavMenus}><MenuIcon name={link.icon} /><span>{link.label}</span></Link>))}</nav>
+                  <div className="mobile-menu-group mt-4 rounded-[var(--radius-lg)] border border-[var(--border-light)] bg-[var(--niger-green-soft)] p-3.5">
+                    <div className="flex items-center gap-2 mb-3"><span className="h-1.5 w-1.5 rounded-full bg-[var(--niger-green)]" /><p className="text-[0.68rem] font-bold tracking-[0.12em] text-[var(--niger-green-dark)] uppercase">{dictionary.nav.ministry}</p></div>
+                    <div className="grid gap-1">{ministryLinks.map((link) => (<Link key={link.href} href={link.href} className="mobile-submenu-link" onClick={closeOpenNavMenus}>{link.label}</Link>))}</div>
                   </div>
-                  <div className="mobile-menu-group mt-3 rounded-xl border border-[#e6eee8] bg-[#f8fcfa] p-3">
-                    <p className="text-[0.68rem] font-semibold tracking-[0.11em] text-[#5a9478] uppercase">
-                      {dictionary.nav.niger}
-                    </p>
-                    <div className="mt-2 grid gap-1">
-                      {nigerLinks.map((link) => (
-                        <Link key={link.href} href={link.href} className="mobile-submenu-link" onClick={closeOpenNavMenus}>
-                          {link.label}
-                        </Link>
-                      ))}
-                    </div>
+                  <div className="mobile-menu-group mt-3 rounded-[var(--radius-lg)] border border-[var(--border-orange)] bg-[var(--niger-orange-soft)] p-3.5">
+                    <div className="flex items-center gap-2 mb-3"><span className="h-1.5 w-1.5 rounded-full bg-[var(--niger-orange)]" /><p className="text-[0.68rem] font-bold tracking-[0.12em] text-[var(--niger-orange)] uppercase">{dictionary.nav.niger}</p></div>
+                    <div className="grid gap-1">{nigerLinks.map((link) => (<Link key={link.href} href={link.href} className="mobile-submenu-link" onClick={closeOpenNavMenus}>{link.label}</Link>))}</div>
                   </div>
-                  <div className="mt-3 border-t border-[#eae6df] pt-3">
-                    <Link href="/admin" className="btn btn-primary w-full" onClick={closeOpenNavMenus}>
-                      {dictionary.nav.admin}
-                    </Link>
+                  <div className="mt-4 pt-4 border-t border-[var(--border-light)]">
+                    <Link href="/admin" className="btn btn-primary w-full" onClick={closeOpenNavMenus}><svg viewBox="0 0 16 16" fill="none" className="h-4 w-4" aria-hidden><rect x="2" y="2" width="5" height="5" rx="1" stroke="currentColor" strokeWidth="1.5" /><rect x="9" y="2" width="5" height="5" rx="1" stroke="currentColor" strokeWidth="1.5" /><rect x="2" y="9" width="5" height="5" rx="1" stroke="currentColor" strokeWidth="1.5" /><rect x="9" y="9" width="5" height="5" rx="1" stroke="currentColor" strokeWidth="1.5" /></svg>{dictionary.nav.admin}</Link>
                   </div>
                 </div>
               </details>
